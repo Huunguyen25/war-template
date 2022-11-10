@@ -1,6 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
-
+import java.util.*;
 /**
  * Emulate a deck of cards
  *
@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class Deck
 {
     private List<Card> cards;
-
+    private int topCard;
+    private Card[] deck = new Card[52];
     /**
      * Deck constructor: Create an empty deck of cards
      */
@@ -45,6 +46,7 @@ public class Deck
      */
     public void shuffle() {
         // To be written
+        Collections.shuffle(cards);
     }
     
     /**
@@ -70,6 +72,7 @@ public class Deck
      */
     public Card dealCardFromDeck() {
         // To be written 
+        
         return null;
     }
     
@@ -79,6 +82,7 @@ public class Deck
      */
     public void addCardToDeck(Card cardToAdd) {
         // To be written
+        
     }
     
 }
