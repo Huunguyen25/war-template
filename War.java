@@ -15,7 +15,7 @@ public class War
     public War()
     {
         // Initializations here...
-        
+        P1 d
         
         // ...then run the event loop
         this.runEventLoop();
@@ -26,7 +26,7 @@ public class War
      * from the War flowchart you created for this game
      */
     public void runEventLoop() {
-        
+        while (
     }
     
     /**
@@ -34,6 +34,7 @@ public class War
      */
     public static void main(String[] args) {
         War war = new War();
+        war.runEventLoop();
     }
 
 }

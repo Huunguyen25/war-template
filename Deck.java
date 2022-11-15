@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.*;
 /**
  * Emulate a deck of cards
- *
  * @author Mr. Jaffe
  * @version 2022-10-19
  */
@@ -19,7 +18,7 @@ public class Deck
     {
         cards = new ArrayList<Card>();
     }
-    
+
     public void initializeNewDeck() {
         String[] suits = {"Hearts","Clubs","Spades","Diamonds"};
         int[] ranks = {2,3,4,5,6,7,8,9,10,11,12,13,14};
@@ -40,7 +39,7 @@ public class Deck
     public int getDeckSize() {
         return cards.size();
     }
-    
+
     /**
      * Shuffles the cards in the deck
      */
@@ -48,7 +47,7 @@ public class Deck
         // To be written
         Collections.shuffle(cards);
     }
-    
+
     /**
      * Deal all the cards in the deck to make two new decks of cards
      * 
@@ -65,24 +64,33 @@ public class Deck
         }
         return halves;
     }
-    
+
     /**
      * Deal the top card of the deck and remove it from the deck
      * @returns The top card of the deck (at cards index 0)
      */
     public Card dealCardFromDeck() {
         // To be written 
-        
-        return null;
+        return this.cards.remove(this.cards.size() -1);
+        /*
+        Card theCard;
+        if (topCard < deck.length) {
+            theCard = deck[topCard];
+            topCard++;
+        } else {
+            theCard = null;
+        }
+        return theCard;
+         */
     }
-    
+
     /**
      * Adds the provided card to the deck
      * @param cardToAdd: Card to add to this deck
      */
     public void addCardToDeck(Card cardToAdd) {
         // To be written
-        
+        this.cards.add(0, cardToAdd);
     }
-    
+
 }
