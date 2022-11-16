@@ -10,7 +10,7 @@ public class Deck
 {
     private List<Card> cards;
     private int topCard;
-    private Card[] deck = new Card[52];
+    Card[] deck = new Card[52];
     /**
      * Deck constructor: Create an empty deck of cards
      */

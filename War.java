@@ -1,3 +1,5 @@
+import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * War game class
@@ -7,6 +9,9 @@
  */
 public class War
 {
+    private Deck deck;
+    Deck deck1, deck2;
+    boolean justWar;
     /**
      * Constructor for the game
      * Include your initialization here -- card decks, shuffling, etc
@@ -15,8 +20,7 @@ public class War
     public War()
     {
         // Initializations here...
-        P1 d
-        
+        deck.initializeNewDeck();
         // ...then run the event loop
         this.runEventLoop();
     }
@@ -26,7 +30,10 @@ public class War
      * from the War flowchart you created for this game
      */
     public void runEventLoop() {
-        while (
+        Scanner scanner = new Scanner(System.in);
+        justWar = true;
+        deck1 = new ArrayList<Card>();
+        
     }
     
     /**
