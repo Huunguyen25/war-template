@@ -9,9 +9,9 @@ import java.util.ArrayList;
  */
 public class War
 {
-    private Deck deck;
-    Deck deck1, deck2;
+    Deck deck;
     boolean justWar;
+    ArrayList <Card> p1Pile, p2Pile;
     /**
      * Constructor for the game
      * Include your initialization here -- card decks, shuffling, etc
@@ -21,6 +21,10 @@ public class War
     {
         // Initializations here...
         deck.initializeNewDeck();
+        justWar = true;
+        p1Pile = new ArrayList<Card>();
+        p2Pile = new ArrayList<Card>();
+        deck.shuffle(); 
         // ...then run the event loop
         this.runEventLoop();
     }
@@ -31,9 +35,7 @@ public class War
      */
     public void runEventLoop() {
         Scanner scanner = new Scanner(System.in);
-        justWar = true;
-        deck1 = new ArrayList<Card>();
-        
+
     }
     
     /**
