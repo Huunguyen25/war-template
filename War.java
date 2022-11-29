@@ -34,8 +34,33 @@ public class War
      * from the War flowchart you created for this game
      */
     public void runEventLoop() {
-        Scanner scanner = new Scanner(System.in);
-
+        int LIMIT = 300;
+        int winner = -1, turns = 0;
+        while(turns < LIMIT && ) {
+            System.out.println("Player 1 has" + + "cards and Player 2 has " + + "cards");
+            Card c1 = p1Pile.remove(0);
+            Card c2 = p2Pile.remove(0);
+            System.out.println("Player 1 plays "+c1+" and player 2 plays "+c2);
+            if() {
+                System.out.println("WAR!");
+                if(p1Pile.size() < 3) {
+                    winner = 2;
+                    System.out.println("Player 1 does not have enough cards for war");
+                    break;
+                } else if (p1Pile.size() < 3) {
+                    winner = 1;
+                    System.out.println("Player 1 does not have enough cards for war");
+                    break;
+                } else {
+                    tmp = new ArrayList<Card>();
+                    for (int i = 0; i<2; i++) {
+                        tmp.add(p1Pile.remove(0));
+                        tmp.add(p2Pile.remove(0));
+                    }
+                    
+                }
+            }
+        }
     }
     
     /**
