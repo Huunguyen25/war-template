@@ -25,6 +25,10 @@ public class War
         p1Pile = new ArrayList<Card>();
         p2Pile = new ArrayList<Card>();
         deck.shuffle(); 
+        deck.dealDeck();
+        deck.dealCardFromDeck();
+        deck.addCardToDeck(p2Pile);
+        deck.addCardToDeck(p1Pile);
         // ...then run the event loop
         this.runEventLoop();
     }
@@ -36,7 +40,7 @@ public class War
     public void runEventLoop() {
         int LIMIT = 300;
         int winner = -1, turns = 0;
-        while(turns < LIMIT && ) {
+        while(turns < LIMIT && p1Pile.size() > 0 && p2Pile.size() > 0) {
             System.out.println("Player 1 has" + + "cards and Player 2 has " + + "cards");
             Card c1 = p1Pile.remove(0);
             Card c2 = p2Pile.remove(0);
@@ -60,6 +64,18 @@ public class War
                     
                 }
             }
+            turn++;
+            System.out.println();
+            if (turns == LIMIT) {
+                System.out.println("Turn limitation reached. No one won. GAME OVER!");
+            } else if(winner = -1) {
+                if (p2Pile.size() == 0){
+                    winner = 1;
+                } else {
+                    winner = 2;
+                }
+            }
+            
         }
     }
     
