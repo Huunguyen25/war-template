@@ -9,9 +9,7 @@ import java.util.ArrayList;
  */
 public class War
 {
-    Deck deck;
-    boolean justWar;
-    ArrayList <Card> p1Pile, p2Pile;
+    Deck[] players;
     /**
      * Constructor for the game
      * Include your initialization here -- card decks, shuffling, etc
@@ -20,16 +18,13 @@ public class War
     public War()
     {
         // Initializations here...
+        Deck deck = new Deck();
         deck.initializeNewDeck();
-        justWar = true;
-        p1Pile = new ArrayList<Card>();
-        p2Pile = new ArrayList<Card>();
-        deck.shuffle(); 
-        deck.dealDeck();
-        deck.dealCardFromDeck();
-        deck.addCardToDeck(p2Pile);
-        deck.addCardToDeck(p1Pile);
-        // ...then run the event loop
+        deck.shuffle();
+        deck = deck.dealDeck();
+        Deck p1Pile = deck[0];
+        Deck p2Pile = deck[1];
+       // ...then run the event loop
         this.runEventLoop();
     }
     
@@ -83,8 +78,8 @@ public class War
      * The main method is called when Java starts your program
      */
     public static void main(String[] args) {
+        System.out.print("\u000C");
         War war = new War();
-        war.runEventLoop();
     }
 
 }
